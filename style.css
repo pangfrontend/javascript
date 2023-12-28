@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: rgb(78, 0, 78);
+}
+
+h1 a {
+    color: red;
+    font-size: 25px;
+    position: fixed;
+    left: 20px;
+    top: 10px;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+li {
+    list-style: none;
+    color: #fff;
+    font-size: large;
+    text-align: left;
+}
+
+li a {
+    color: #fff;
+}
+
+#burger-menu {
+    cursor: pointer;
+    height: 10px;
+    width:  20px;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+    right: -330px;
+    top: -10px;
+    padding: 15px;
+}
+
+#menu {
+	z-index: 1;
+	min-width: 100%;
+	min-height: 100%;
+	position: fixed;
+	top: 0;
+	height: 0;
+	visibility: hidden;
+	opacity: 0;
+	text-align: center;
+	padding-top: 20px;
+	transition: all 0.3s ease-in-out;
+}
+
+.close {
+    span {
+        transform: rotate(45deg);
+    }
+    span::after {
+        transform: rotate(-90deg);
+        top: 0;
+    }
+}
+
+#menu.overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 100px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+span, span::after {
+    background: #fff;
+    display: block;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;   
+}
+
+span::after {
+    content: ' ';
+}
+
+span {
+    width: 20px;
+    right: 5px;
+    top: 10px;
+}
+
+span::after {
+    width: 20px;
+    right: 0;
+    top: 6px;
+}
